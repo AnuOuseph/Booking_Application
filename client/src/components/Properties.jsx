@@ -1,12 +1,12 @@
 /* eslint-disable no-unused-vars */
 import React from 'react'
-import useFetch from '../../hooks/useFetch'
+import useFetch from '../hooks/useFetch'
 
 function Properties() {
     const {data,loading,error} = useFetch("http://localhost:5000/api/place/countByType")
     const obj = data.data
     const image = [
-        "/hotel.jpg",
+        "/hotel1.jpeg",
         "/apart2.jpg",
         "/villa.jpeg",
         "/resort.jpg",
@@ -26,7 +26,7 @@ function Properties() {
             {obj && obj.map((item,i)=>(
             <div className='' key={i}>
                 <div className='px-4 py-1 flex justify-center'>
-                    <img className='rounded-3xl h-28 w-52' src={image[i]} alt="" />
+                    <img className='rounded-3xl h-28 w-52 object-fit' src={image[i]} alt="" />
                 </div>
                 <div className='bg-white px-6 flex justify-center'>
                     <div className='text-center'>

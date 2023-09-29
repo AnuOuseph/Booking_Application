@@ -23,9 +23,9 @@ function NavBar() {
         {isOpen && (
           <div className=" my-6 md:right-20 lg:right-40 right-4 p-4 absolute w-32 bg-white shadow-md shadow-gray-500 text-md rounded-md shadow-lg">
           
-              <a className="block px-4 py-2 text-xs text-gray-800 font-medium hover:bg-gray-100"><Link to='/login'>LOGIN</Link></a>
+              <p className="block px-4 py-2 text-xs text-gray-800 font-medium hover:bg-gray-100"><Link to='/login'>LOGIN</Link></p>
               <hr />
-              <a className="block px-4 py-2 text-xs text-gray-800 font-medium hover:bg-gray-100"><Link to='/signup'>SIGNUP</Link></a>
+              <p className="block px-4 py-2 text-xs text-gray-800 font-medium hover:bg-gray-100"><Link to='/signup'>SIGNUP</Link></p>
           </div>
         )}
         </div>

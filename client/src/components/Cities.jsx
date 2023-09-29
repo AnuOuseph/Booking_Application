@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React, { useState } from 'react'
-import useFetch from '../../hooks/useFetch'
+import useFetch from '../hooks/useFetch'
 
 function Cities() {
     const {data,loading,error} = useFetch("http://localhost:5000/api/place/countByCity?cities=Munnar,Ooty,Goa")
