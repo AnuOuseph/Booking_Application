@@ -4,6 +4,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {faCircle} from "@fortawesome/free-regular-svg-icons"
 import useFetch from '../hooks/useFetch'
 import { useLocation } from "react-router-dom"
+import { FadeLoader } from 'react-spinners';
+
 
 function SingleView() {
   const location = useLocation()
@@ -14,7 +16,13 @@ function SingleView() {
   const hotel = data?.data
   return (
     <div className="bg-white mt-20 w-[80%] mx-auto my-4">
-      {loading?<p>loading..</p>:<> <div className="md:flex justify-between items-center py-4">
+      {loading?
+      <>
+        <div className='w-full h-screen flex justify-center items-center'>
+          <FadeLoader color="#3B82F6" />
+        </div>
+      </>
+      :<> <div className="md:flex justify-between items-center py-4">
         <div>
           <h4 className="md:text-2xl text-lg font-medium">{hotel?.headline}</h4>
           <p>{hotel?.city}</p>

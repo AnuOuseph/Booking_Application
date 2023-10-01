@@ -5,6 +5,7 @@ import { faSearch, faStar,faChartSimple } from '@fortawesome/free-solid-svg-icon
 import useFetch from '../hooks/useFetch'
 import Filter from './Filter'
 import {useNavigate} from "react-router-dom"
+import { FadeLoader } from 'react-spinners';
 
 function HotelsList() {
   const {data,loading,error} = useFetch("http://localhost:5000/api/place?featured=true")
@@ -28,7 +29,12 @@ function HotelsList() {
         <button onClick={handleMenu} className='font-semibold px-4'>FILTER</button>
         {menu ? <Filter menu={handleMenu}/>: null }
       </div>
-      {loading? <p>Loading..</p>:
+      {loading? 
+      <>
+        <div className='w-full h-[50%] flex justify-center items-center'>
+          <FadeLoader color="#3B82F6" />
+        </div>
+      </>:
       <div className='grid md:grid-cols-3 lg:grid-cols-4 grid-cols-1'>
         {hotels && hotels.map((item)=>(
         <>
