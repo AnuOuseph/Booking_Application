@@ -11,9 +11,10 @@ function Filter(props) {
             <p className="text-xl font-medium"> Filter</p>
           </div>
           <div>
-            <p>Destination</p>
-            <input type="text" className='w-full my-2 py-1 px-4 border border-gray-500 outline-none rounded-xl'/>
+            <p className='text-md font-medium my-2'>Destination</p>
+            <input type="text" className='w-full my-2 py-1 px-4 border border-gray-500 outline-none rounded-xl' placeholder='Enter city..'/>
           </div>
+          <p className='text-md font-medium my-2'>Date</p>
           <div className="border border-gray-500 rounded-xl mt-2">
             <div className="grid grid-cols-2">
               <div className="border-r border-gray-500">
@@ -26,17 +27,13 @@ function Filter(props) {
               </div>
             </div>
           </div>
-          <p className='text-md font-medium my-2'>Options</p>
+          <p className='text-md font-medium my-2'>Price</p>
           <div className='flex justify-between py-2'>
             <p>Min Price:</p>
             <input type="tel" className='border w-32 border-gray-500 rounded-xl outline-none px-4' />
           </div>
           <div className='flex justify-between py-2'>
             <p>Max Price:</p>
-            <input type="tel" className='border w-32 border-gray-500 rounded-xl outline-none px-4' />
-          </div>
-          <div className='flex justify-between py-2'>
-            <p>Rooms:</p>
             <input type="tel" className='border w-32 border-gray-500 rounded-xl outline-none px-4' />
           </div>
           <button className="bg-blue-600 w-full my-4 py-1 rounded-xl text-md text-white font-medium">submit</button>

@@ -34,7 +34,7 @@ function Login() {
         e.preventDefault();
         try{
             const res = await axios.post("http://localhost:5000/api/auth/login",formData)
-            localStorage.setItem("user",JSON.stringify(res.data))
+            localStorage.setItem("zephyruser",JSON.stringify(res.data))
             setData(res.data)
             navigate('/')
         }catch(err){

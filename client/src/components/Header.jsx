@@ -2,6 +2,7 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
+import { Link } from 'react-router-dom'
 function Header() {
     
   return (
@@ -17,7 +18,7 @@ function Header() {
            <div className='w-96 md:my-24 mt-40 md:mx-20'> 
                 <p className='text-6xl px-4'>Air, Sleep, Dream</p>
                 <p className='text-xl my-6 px-4'>Find and book your dream destination.</p>
-                <button className='bg-blue-500 text-white px-6 mx-4 py-2 rounded-full mb-40'>Start your search.</button>
+                <button className='bg-blue-500 text-white px-6 mx-4 py-2 rounded-full mb-40'><Link to='/hotels'>Get started!.</Link></button>
            </div>
         </div>
       </div>

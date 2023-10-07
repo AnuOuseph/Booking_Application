@@ -11,7 +11,7 @@ function NavBar() {
     const [isOpen, setIsOpen] = useState(false);
   return (
     <div className="md:px-20 lg:px-40 px-4 py-4 flex justify-between w-full bg-white top-0 fixed z-50 border shadow">
-      <h1 className='md:text-2xl'><span className='mx-2 text-blue-500'><FontAwesomeIcon icon={faRoute}/></span><b>Booking.</b></h1>
+      <h1 className='md:text-xl'><span className='mx-2 text-blue-500'><FontAwesomeIcon icon={faRoute}/></span><b>ZEPHYR.</b></h1>
       <div >
         <div>
         <div className='border md:text-xl px-4 py-1 rounded-full'>
@@ -21,11 +21,10 @@ function NavBar() {
           <FontAwesomeIcon icon={faUser}/>
         </div>
         {isOpen && (
-          <div className=" my-6 md:right-20 lg:right-40 right-4 p-4 absolute w-32 bg-white shadow-md shadow-gray-500 text-md rounded-md shadow-lg">
-          
-              <p className="block px-4 py-2 text-xs text-gray-800 font-medium hover:bg-gray-100"><Link to='/login'>LOGIN</Link></p>
-              <hr />
-              <p className="block px-4 py-2 text-xs text-gray-800 font-medium hover:bg-gray-100"><Link to='/signup'>SIGNUP</Link></p>
+          <div className=" my-5 md:right-20 lg:right-36 right-3 p-4 absolute md:w-[81%] w-[95%] h-96 bg-white opacity-90 shadow-md shadow-gray-500 text-md rounded-md shadow-lg flex flex-col justify-center items-center">
+              <p className="block px-4 py-2 text-md md:text-xl text-gray-800 font-bold hover:text-blue-500"><Link to='/login'>LOGIN</Link></p>
+              <hr className='w-96 bg-black'/>
+              <p className="block px-4 py-2 text-md md:text-xl text-gray-800 font-bold hover:text-blue-500"><Link to='/signup'>SIGNUP</Link></p>
           </div>
         )}
         </div>

@@ -4,7 +4,7 @@ import React from 'react'
 function Footer() {
   return (
     <div className='bg-gray-300 flex h-auto items-center justify-center py-4'>
-        <p className='md:px-4 text-xs'>© 2023 Booking, Inc.</p>
+        <p className='md:px-4 text-xs'>© 2023 Zephyr, Inc.</p>
         <p className='md:px-4 text-xs'>Privacy</p>
         <p className='md:px-4 text-xs'>Terms</p>
         <p className='md:px-4 text-xs'>Details</p>
