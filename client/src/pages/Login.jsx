@@ -16,9 +16,9 @@ function Login() {
         password: '',
     });
 
-    // const [data,setData] = useState(
-    //     JSON.parse(localStorage.getItem("zephyruser")) || null
-    // )
+    const [data,setData] = useState(
+        JSON.parse(localStorage.getItem("zephyruser")) || null
+    )
     //const [error,setError] = useState(null)
 
     const handleChange = (e) => {
@@ -26,11 +26,11 @@ function Login() {
         setFormData({ ...formData, [name]: value });
     };
     console.log(formData)
-    // useEffect(() => {
-    //     if(data){
-    //         navigate('/');
-    //     }
-    // },[data, navigate]);
+    useEffect(() => {
+        if(data){
+            navigate('/');
+        }
+    },[data, navigate]);
 
     const dispatch = useDispatch()
 
